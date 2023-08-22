@@ -14,6 +14,13 @@
 		A298C4FE2A94388D0006FB3D /* CleanSwift_AppleMusicApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A298C4FC2A94388D0006FB3D /* CleanSwift_AppleMusicApp.xcdatamodeld */; };
 		A298C5002A94388E0006FB3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A298C4FF2A94388E0006FB3D /* Assets.xcassets */; };
 		A298C5032A94388E0006FB3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A298C5012A94388E0006FB3D /* LaunchScreen.storyboard */; };
+		A298C50C2A9439A30006FB3D /* MusicSearchConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A298C50B2A9439A30006FB3D /* MusicSearchConfigurator.swift */; };
+		A298C50E2A9439CC0006FB3D /* MusicSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A298C50D2A9439CC0006FB3D /* MusicSearchViewController.swift */; };
+		A298C5152A943A260006FB3D /* MusicSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A298C5142A943A260006FB3D /* MusicSearchInteractor.swift */; };
+		A298C5172A943A3B0006FB3D /* MusicSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A298C5162A943A3B0006FB3D /* MusicSearchPresenter.swift */; };
+		A298C51A2A943A6D0006FB3D /* MusicSearchWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A298C5192A943A6D0006FB3D /* MusicSearchWorker.swift */; };
+		A298C51D2A943F280006FB3D /* MusicKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A298C51C2A943F280006FB3D /* MusicKitManager.swift */; };
+		A298C5202A9443AD0006FB3D /* MusicSearchModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A298C51F2A9443AD0006FB3D /* MusicSearchModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,13 @@
 		A298C4FF2A94388E0006FB3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A298C5022A94388E0006FB3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A298C5042A94388E0006FB3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A298C50B2A9439A30006FB3D /* MusicSearchConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchConfigurator.swift; sourceTree = "<group>"; };
+		A298C50D2A9439CC0006FB3D /* MusicSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchViewController.swift; sourceTree = "<group>"; };
+		A298C5142A943A260006FB3D /* MusicSearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchInteractor.swift; sourceTree = "<group>"; };
+		A298C5162A943A3B0006FB3D /* MusicSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchPresenter.swift; sourceTree = "<group>"; };
+		A298C5192A943A6D0006FB3D /* MusicSearchWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchWorker.swift; sourceTree = "<group>"; };
+		A298C51C2A943F280006FB3D /* MusicKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicKitManager.swift; sourceTree = "<group>"; };
+		A298C51F2A9443AD0006FB3D /* MusicSearchModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,8 @@
 		A298C4F22A94388D0006FB3D /* CleanSwift-AppleMusicApp */ = {
 			isa = PBXGroup;
 			children = (
+				A298C51B2A943F1A0006FB3D /* Managers */,
+				A298C50A2A9438DC0006FB3D /* MusicSearchModule */,
 				A298C4F32A94388D0006FB3D /* AppDelegate.swift */,
 				A298C4F52A94388D0006FB3D /* SceneDelegate.swift */,
 				A298C4F72A94388D0006FB3D /* ViewController.swift */,
@@ -68,6 +84,83 @@
 				A298C4FC2A94388D0006FB3D /* CleanSwift_AppleMusicApp.xcdatamodeld */,
 			);
 			path = "CleanSwift-AppleMusicApp";
+			sourceTree = "<group>";
+		};
+		A298C50A2A9438DC0006FB3D /* MusicSearchModule */ = {
+			isa = PBXGroup;
+			children = (
+				A298C51E2A9443950006FB3D /* Entities */,
+				A298C5182A943A620006FB3D /* Worker */,
+				A298C5132A943A0A0006FB3D /* Router */,
+				A298C5122A943A000006FB3D /* Presenter */,
+				A298C5112A9439F70006FB3D /* Interactor */,
+				A298C5102A9439E90006FB3D /* ViewController */,
+				A298C50F2A9439DD0006FB3D /* Configurator */,
+			);
+			path = MusicSearchModule;
+			sourceTree = "<group>";
+		};
+		A298C50F2A9439DD0006FB3D /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				A298C50B2A9439A30006FB3D /* MusicSearchConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		A298C5102A9439E90006FB3D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A298C50D2A9439CC0006FB3D /* MusicSearchViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A298C5112A9439F70006FB3D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				A298C5142A943A260006FB3D /* MusicSearchInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		A298C5122A943A000006FB3D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A298C5162A943A3B0006FB3D /* MusicSearchPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A298C5132A943A0A0006FB3D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		A298C5182A943A620006FB3D /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				A298C5192A943A6D0006FB3D /* MusicSearchWorker.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		A298C51B2A943F1A0006FB3D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A298C51C2A943F280006FB3D /* MusicKitManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		A298C51E2A9443950006FB3D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				A298C51F2A9443AD0006FB3D /* MusicSearchModels.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +235,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				A298C4FE2A94388D0006FB3D /* CleanSwift_AppleMusicApp.xcdatamodeld in Sources */,
+				A298C51A2A943A6D0006FB3D /* MusicSearchWorker.swift in Sources */,
+				A298C50C2A9439A30006FB3D /* MusicSearchConfigurator.swift in Sources */,
+				A298C5202A9443AD0006FB3D /* MusicSearchModels.swift in Sources */,
 				A298C4F82A94388D0006FB3D /* ViewController.swift in Sources */,
 				A298C4F42A94388D0006FB3D /* AppDelegate.swift in Sources */,
+				A298C5172A943A3B0006FB3D /* MusicSearchPresenter.swift in Sources */,
+				A298C51D2A943F280006FB3D /* MusicKitManager.swift in Sources */,
+				A298C50E2A9439CC0006FB3D /* MusicSearchViewController.swift in Sources */,
 				A298C4F62A94388D0006FB3D /* SceneDelegate.swift in Sources */,
+				A298C5152A943A260006FB3D /* MusicSearchInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
